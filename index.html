@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master Forex Trading with proven strategies, ICT concepts, and strict risk management.">
+    <title>Nate Trading Mastery | Forex Education</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS Variables --- */
+        :root {
+            --bg-dark: #070709;
+            --bg-card: #121216;
+            --gold: #D4AF37;
+            --gold-hover: #F3E5AB;
+            --text-light: #F5F5F5;
+            --text-muted: #A0A0A0;
+            --transition: all 0.3s ease;
+        }
+
+        /* --- Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gold-hover);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--gold);
+            color: #000;
+        }
+
+        .btn-telegram {
+            background-color: #0088cc;
+            color: white;
+            border: none;
+        }
+
+        .btn-telegram:hover {
+            background-color: #0099e6;
+            box-shadow: 0 0 15px rgba(0, 136, 204, 0.4);
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: rgba(7, 7, 9, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+            background: radial-gradient(circle at center, #1a1a24 0%, var(--bg-dark) 70%);
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 100px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- Free Content Banner --- */
+        .free-banner {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--gold);
+            border-bottom: 1px solid var(--gold);
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        /* --- Cards --- */
+        .card {
+            background-color: var(--bg-card);
+            padding: 40px 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .card i {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        /* --- Course Pricing --- */
+        .price-box {
+            background: linear-gradient(145deg, #121216, #1a1a24);
+            border: 2px solid var(--gold);
+            text-align: center;
+            padding: 50px 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 50px auto 0;
+        }
+
+        .price-box h3 { font-size: 2rem; }
+        .price-box .price { font-size: 3rem; font-weight: 700; color: var(--gold); margin: 20px 0; }
+        .price-box ul { list-style: none; margin-bottom: 30px; color: var(--text-muted); }
+        .price-box ul li { margin-bottom: 15px; }
+
+        /* --- FAQ --- */
+        .faq-item {
+            background-color: var(--bg-card);
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            border-left: 3px solid transparent;
+            transition: var(--transition);
+        }
+        .faq-item:hover { border-left-color: var(--gold); }
+        .faq-question { font-weight: 600; display: flex; justify-content: space-between; }
+        .faq-answer { display: none; margin-top: 15px; color: var(--text-muted); }
+
+        /* --- Contact --- */
+        form { display: flex; flex-direction: column; gap: 20px; }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--bg-dark);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            font-family: inherit;
+            border-radius: 4px;
+        }
+        input:focus, textarea:focus { outline: none; border-color: var(--gold); }
+        
+        .social-links { display: flex; gap: 20px; margin-top: 30px; }
+        .social-links a { font-size: 24px; color: var(--text-muted); }
+        .social-links a:hover { color: var(--gold); }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #040405;
+            text-align: center;
+            padding: 40px 5%;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* --- Animations --- */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background-color: var(--bg-card);
+                width: 100%;
+                padding: 40px 0;
+                transition: var(--transition);
+            }
+            .nav-links.active { left: 0; }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-buttons { flex-direction: column; }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo"><span class="gold-text">Nate</span>Trading</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#course">The Program</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;">Enroll Now</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content fade-in">
+            <h1>Master Forex Trading with <span class="gold-text">Proven Strategies</span></h1>
+            <p>No shortcuts. Just discipline, consistency, and precision. Master Smart Money Concepts to navigate the markets like the institutions do.</p>
+            <div class="hero-buttons">
+                <a href="#course" class="btn btn-primary">Start Learning</a>
+                <a href="#about" class="btn btn-outline">Watch Intro Video <i class="fas fa-play-circle" style="margin-left: 8px;"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Free Content Banner -->
+    <section id="free-signals" class="free-banner fade-in">
+        <h2>Want a taste of our strategy?</h2>
+        <p style="margin: 15px 0 25px; color: var(--text-muted);">Join our Telegram community for free weekly market breakdowns and educational setups.</p>
+        <a href="#" class="btn btn-telegram"><i class="fab fa-telegram-plane" style="margin-right: 8px;"></i> Join Free Telegram</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <div class="grid-2">
+            <div>
+                <!-- Placeholder for Video/Image -->
+                <div style="width: 100%; height: 400px; background-color: var(--bg-card); display: flex; align-items: center; justify-content: center; border: 1px solid var(--gold); border-radius: 8px;">
+                    <i class="fas fa-play-circle" style="font-size: 4rem; color: var(--gold); cursor: pointer;"></i>
+                </div>
+            </div>
+            <div>
+                <h2 class="section-title" style="text-align: left;">Trading is <span class="gold-text">90% Psychology</span></h2>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                    I didn't become consistently profitable overnight. It took years of blown accounts, frustration, and screen time to realize that the secret wasn't a magic indicator—it was <strong>market structure and risk management</strong>.
+                </p>
+                <p style="color: var(--text-muted); margin-bottom: 30px;">
+                    My name is [Instructor Name]. Over the last 5 years, I've traded my way to multi-six-figure funded accounts. This brand was built to teach you exactly how I read price action, manage my risk, and maintain the psychological edge required to survive in this industry.
+                </p>
+                <ul style="list-style: none; margin-bottom: 30px;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle gold-text" style="margin-right: 10px;"></i> Verifiable Funded Trader</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle gold-text" style="margin-right: 10px;"></i> Strict Focus on Discipline</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle gold-text" style="margin-right: 10px;"></i> No Unrealistic Promises</li>
+                </ul>
+                <a href="#course" class="btn btn-primary">See the Curriculum</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Section -->
+    <section id="course" style="background-color: #0a0a0d;">
+        <h2 class="section-title fade-in">The <span class="gold-text">Masterclass</span> Curriculum</h2>
+        <div class="grid-3 fade-in">
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>1. Forex Fundamentals</h3>
+                <p style="color: var(--text-muted); margin-top: 15px;">Understand pips, lots, leverage, and the core mechanics of the foreign exchange market. Perfect for absolute beginners.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-search-dollar"></i>
+                <h3>2. ICT & Smart Money</h3>
+                <p style="color: var(--text-muted); margin-top: 15px;">Master liquidity concepts, Fair Value Gaps (FVGs), Order Blocks, and advanced market structure shifts.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>3. Risk Management</h3>
+                <p style="color: var(--text-muted); margin-top: 15px;">Learn the exact mathematical formulas to protect your capital. Survive the drawdowns to capitalize on the winning streaks.</p>
+            </div>
+        </div>
+        
+        <div class="price-box fade-in">
+            <h3>Full Access Enrollment</h3>
+            <div class="price">$499</div>
+            <ul>
+                <li><i class="fas fa-check gold-text"></i> 40+ Hours of Video Content</li>
+                <li><i class="fas fa-check gold-text"></i> Live Execution & Case Studies</li>
+                <li><i class="fas fa-check gold-text"></i> Private Discord Community</li>
+                <li><i class="fas fa-check gold-text"></i> Lifetime Updates</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="width: 100%;">Enroll Now</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="fade-in">
+        <h2 class="section-title">Student <span class="gold-text">Results</span></h2>
+        <div class="grid-3">
+            <div class="card">
+                <div style="color: var(--gold); margin-bottom: 10px;">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p style="font-style: italic; color: var(--text-muted);">"I was jumping from strategy to strategy for 2 years. This course simplified market structure for me. Finally passed my $100k prop firm challenge."</p>
+                <h4 style="margin-top: 20px;">- Michael T.</h4>
+            </div>
+            <div class="card">
+                <div style="color: var(--gold); margin-bottom: 10px;">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p style="font-style: italic; color: var(--text-muted);">"No fluff, no Lambos. Just pure charts and psychology. The risk management module alone saved my trading career."</p>
+                <h4 style="margin-top: 20px;">- Sarah J.</h4>
+            </div>
+            <div class="card">
+                <div style="color: var(--gold); margin-bottom: 10px;">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p style="font-style: italic; color: var(--text-muted);">"The live case studies where he executes in real-time completely changed how I view liquidity grabs. Best investment I've made."</p>
+                <h4 style="margin-top: 20px;">- David R.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" style="background-color: #0a0a0d;" class="fade-in">
+        <h2 class="section-title">Frequently Asked <span class="gold-text">Questions</span></h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">Is this course suitable for complete beginners? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">Yes. Module 1 is dedicated entirely to the absolute basics of Forex. However, the course quickly scales up to advanced Smart Money concepts.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">Do I need a lot of capital to start trading? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">No. We highly recommend starting on a demo account. Once you are consistent, we guide you on how to apply for prop firm funding so you don't have to risk your own capital.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">What are ICT concepts? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-answer">ICT (Inner Circle Trader) concepts focus on reading price action based on liquidity and how algorithms deliver price, rather than relying on retail indicators like RSI or MACD.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <div class="grid-2">
+            <div>
+                <h2>Ready to take <span class="gold-text">Control?</span></h2>
+                <p style="color: var(--text-muted); margin: 20px 0;">Have questions before joining? Drop us a message or connect with us on our social platforms.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <form onsubmit="event.preventDefault(); alert('Message sent successfully! (Demo)');">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3 style="margin-bottom: 15px;"><span class="gold-text">Nate</span>Trading</h3>
+        <p>DISCLAIMER: Trading foreign exchange carries a high level of risk, and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Past performance is not indicative of future results.</p>
+        <p style="margin-top: 20px;">&copy; 2026 Nate Trading Mastery. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const answer = element.querySelector('.faq-answer');
+            const icon = element.querySelector('i');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.className = 'fas fa-chevron-down';
+            } else {
+                answer.style.display = 'block';
+                icon.className = 'fas fa-chevron-up';
+            }
+        }
+
+        // Scroll Animation Observer
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('appear');
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
